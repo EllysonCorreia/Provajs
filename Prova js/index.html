@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio Profissional</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="icon" href="data:;base64,=">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <div class="logo-area">
+                <img src="Img/eu.jpg" alt="Minha Foto" id="minha-logo">
+            </div>
+            <button id="btn-theme-toggle" title="Mudar Tema">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+
+        <nav class="menu-area">
+            <a href="#projetos">Projetos</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <div class="header-right">
+            <button id="btn-abrir-modal" class="btn-login-trigger">
+                <i class="fas fa-user-circle"></i> Área do Cliente
+            </button>
+        </div>
+    </header>
+
+    <section id="projetos" class="conteudo-principal">
+        <h1>Meus Projetos</h1>
+        <p>Veja o que tenho desenvolvido com tecnologias web modernas.</p>
+        
+        <div class="gallery-container" id="minha-galeria">
+            <div class="project-card">
+                <div class="card-icon"><i class="fab fa-html5"></i></div>
+                <h3>Landing Page</h3>
+                <p>Página institucional responsiva.</p>
+            </div>
+            <div class="project-card">
+                <div class="card-icon"><i class="fab fa-js"></i></div>
+                <h3>Sistema de Login</h3>
+                <p>Validação e segurança com JS.</p>
+            </div>
+            <div class="project-card">
+                <div class="card-icon"><i class="fab fa-css3-alt"></i></div>
+                <h3>Animações CSS</h3>
+                <p>Efeitos visuais e Glassmorphism.</p>
+            </div>
+        </div>
+
+        <button id="btn-exibir-dados">
+            <i class="fas fa-plus"></i> Carregar Mais Projetos
+        </button>
+    </section>
+
+    <section id="sobre" class="conteudo-principal">
+        <h1>Sobre Mim</h1>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="Img/eu.jpg" alt="Sobre mim">
+            </div>
+            <div class="about-text">
+                <h3>Desenvolvedor Web em Formação</h3>
+                <p>Olá! Sou apaixonado por tecnologia e design. Comecei a minha jornada na programação recentemente e tenho focado em criar experiências web fluidas e interativas.</p>
+                <div class="skills-tags">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">UI Design</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="conteudo-principal">
+        <h1>Fale Comigo</h1>
+        <p>Envie uma mensagem!</p>
+        <form id="form-contato" class="contact-form">
+            <div class="form-group">
+                <input type="text" id="nome-contato" placeholder="Seu Nome" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email-contato" placeholder="Seu E-mail" required>
+            </div>
+            <div class="form-group">
+                <textarea id="msg-contato" placeholder="Sua Mensagem" required></textarea>
+            </div>
+            <button type="submit" id="btn-enviar-contato">
+                <i class="fas fa-paper-plane"></i> Enviar Mensagem
+            </button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <div id="modal-login" class="modal-overlay">
+        <div class="modal-box">
+            <button class="btn-fechar-modal">&times;</button>
+            
+            <h2>Acesso Restrito</h2>
+            <p>Entre com suas credenciais</p>
+            
+            <div class="modal-inputs">
+                <div class="input-wrapper">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="usuario" placeholder="Usuário">
+                </div>
+                <div class="input-wrapper">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="senha" placeholder="Senha">
+                </div>
+            </div>
+
+            <button id="btn-logar">ENTRAR</button>
+            <div id="msg-login"></div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
